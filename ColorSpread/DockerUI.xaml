@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="ColorSpread.DockerUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ColorSpread"
+             mc:Ignorable="d" 
+             MinWidth="225" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Colors.xaml"/>
+                <ResourceDictionary Source="Styles/Styles.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="0,0,0,0">
+        <StackPanel Name="teste" >
+
+
+            <GroupBox Header="Colors orders">
+                <Grid Margin="0,95,0,-2"  Height="32" VerticalAlignment="Top">
+
+                    <Label Content="Color name:" Margin="0,-93,132,0" Height="24" VerticalAlignment="Top" />
+                    <RadioButton Content="Ascending" Name="rb_asc" IsChecked="True" Height="16" VerticalAlignment="Top" Margin="0,-69,115,0"></RadioButton>
+                    <RadioButton Content="Descending" Name="rb_desc" Margin="98,-69,0,0" HorizontalAlignment="Left" Width="119" Height="17" VerticalAlignment="Top"></RadioButton>
+
+
+                    <Label Content="Order in pallete:" Margin="0,-48,132,0" Height="24" VerticalAlignment="Top" />
+                    <RadioButton Content="Ascending" Name="rb_palette_asc"  Height="16" VerticalAlignment="Top" Margin="0,-24,115,0"></RadioButton>
+                    <RadioButton Content="Descending" Name="rb_palette_desc" Margin="98,-24,0,0" HorizontalAlignment="Left" Width="119" Height="15" VerticalAlignment="Top"></RadioButton>
+
+                    <RadioButton Content="Random" Name="rb_random" Margin="0,9,0,0" Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84"></RadioButton>
+                </Grid>
+            </GroupBox>
+            <Separator/>
+            <GroupBox Header="Colors replacement.:" >
+                <Grid Margin="0,10">
+                    <Button  Height="30"  VerticalAlignment="Top" Width="30" Name="img_color" Margin="10,0,0,0" Click="img_color_Click" HorizontalAlignment="Left"/>
+                    <Label Content="→" Margin="46,0,0,0" HorizontalAlignment="Left" Width="30" FontSize="14" FontWeight="Bold" />
+                    <Button  Height="30"  VerticalAlignment="Top" Width="30" Name="img_color2" Margin="72,0,0,0" Click="img_color2_Click" HorizontalAlignment="Left"/>
+                    <Button Name="btn_show" Content="Change" Click="btn_show_Click" Margin="158,0,0,0" />
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Duplicating objects.:" Height="144">
+                <Grid>
+                    <Label Content="Margin.:" Margin="10,0,0,0" HorizontalAlignment="Left" Width="61" Height="29" VerticalAlignment="Top"/>
+                    <Label Content="10" Name="lba_margin" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left" Width="49" Margin="64,0,0,0" />
+                    <Slider Maximum="100" SmallChange="1" Value="10" Margin="0,29,0,0" ValueChanged="Slider_ValueChanged" Height="22" VerticalAlignment="Top" Name="slider_margin"/>
+                    <Button Name="btn_duplicateOrder" Content="Duplicate" Click="btn_duplicateOrder_Click" Height="20" VerticalAlignment="Top" Margin="0,97,0,0" >
+                        <Button.ToolTip>
+                            <Label Content="Change your shape color container name to &quot;color&quot;" />
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content="Big Name" Margin="115,72,0
+                            ,0" VerticalAlignment="Top" Name="btn_bigColorName" Click="btn_bigColorName_Click"/>
+                    <Button Content="Mark Shape" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click"/>
+                </Grid>
+            </GroupBox>
+
+
+            <GroupBox Header="Texts.:" Height="78">
+                <Grid>
+                    <RadioButton Content="Letters" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left" Width="78" Margin="10,0,0,0" IsChecked="True" Name="rb_letters"/>
+                    <RadioButton Content="Words" Margin="130,0,0,32" HorizontalAlignment="Left" Width="72" Name="rb_words"/>
+                    <Button Name="btn_colorinWords" Content="Colors in Texts" Click="btn_colorinWords_Click" Margin="0,25,0,0" Height="22" VerticalAlignment="Top" />
+                </Grid>
+            </GroupBox>
+
+            <Button Name="btn_random" Content="Colors in Shapes" Click="btn_random_Click" Margin="0,4,0,0" />
+
+
+        </StackPanel>
+
+    </Grid>
+
+
+</UserControl>
