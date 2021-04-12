@@ -15,6 +15,8 @@ Global
 		2019 Release|Any CPU = 2019 Release|Any CPU
 		2020 Debug|Any CPU = 2020 Debug|Any CPU
 		2020 Release|Any CPU = 2020 Release|Any CPU
+		2021 Debug|Any CPU = 2021 Debug|Any CPU
+		2021 Release|Any CPU = 2021 Release|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 		X7 Debug|Any CPU = X7 Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2020 Debug|Any CPU.Build.0 = 2020 Debug|Any CPU
 		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2020 Release|Any CPU.ActiveCfg = 2020 Release|Any CPU
 		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2020 Release|Any CPU.Build.0 = 2020 Release|Any CPU
+		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2021 Debug|Any CPU.ActiveCfg = 2021 Debug|Any CPU
+		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2021 Debug|Any CPU.Build.0 = 2021 Debug|Any CPU
+		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2021 Release|Any CPU.ActiveCfg = 2021 Release|Any CPU
+		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.2021 Release|Any CPU.Build.0 = 2021 Release|Any CPU
 		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBF355DA-7B1E-4686-A62A-A20BEFF7CAAC}.Release|Any CPU.ActiveCfg = Debug|Any CPU

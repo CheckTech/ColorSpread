@@ -1,4 +1,5 @@
-﻿using System;
+﻿using br.corp.bonus630.plugin.ZxingQrCodeConfigurator;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -43,15 +44,20 @@ namespace ColorSpread
         {
             ActionRunner(() =>
             {
-                double x = 0;
-                double y = 0;
-                int shift = 0;
-                this.corelApp.ActiveDocument.GetUserClick(out x, out y, out shift, 1, false, Corel.Interop.VGCore.cdrCursorShape.cdrCursorExtPick);
-                Corel.Interop.VGCore.Shapes selectedShapes = this.corelApp.ActiveDocument.ActivePage.SelectShapesAtPoint(x, y, false).Shapes;
-                if (selectedShapes == null || selectedShapes.Count < 1)
-                    return;
-                colorReplace.ColorOrigin = selectedShapes.First.Fill.UniformColor;
-                img_color.Background = colorReplace.ColorOrigin.ToSystemColor();
+            //double x = 0;
+            //double y = 0;
+            //int shift = 0;
+            //this.corelApp.ActiveDocument.GetUserClick(out x, out y, out shift, 1, false, Corel.Interop.VGCore.cdrCursorShape.cdrCursorExtPick);
+            //Corel.Interop.VGCore.Shapes selectedShapes = this.corelApp.ActiveDocument.ActivePage.SelectShapesAtPoint(x, y, false).Shapes;
+            //if (selectedShapes == null || selectedShapes.Count < 1)
+            //    return;
+            //colorReplace.ColorOrigin = selectedShapes.First.Fill.UniformColor;
+            ColorPicker c = new ColorPicker(this.corelApp.ActivePalette);
+                if ((bool)c.ShowDialog())
+                {
+                    colorReplace.ColorOrigin = c.SelectedColor.CorelColor;
+                    img_color.Background = colorReplace.ColorOrigin.ToSystemColor();
+                }
             });
         }
 
@@ -60,15 +66,21 @@ namespace ColorSpread
             ActionRunner(() =>
             {
                 //colorReplace.ColorDestin = this.corelApp.ActivePalette.Color[20];
-                double x = 0;
-                double y = 0;
-                int shift = 0;
-                this.corelApp.ActiveDocument.GetUserClick(out x, out y, out shift, 1, false, Corel.Interop.VGCore.cdrCursorShape.cdrCursorExtPick);
-                Corel.Interop.VGCore.Shapes selectedShapes = this.corelApp.ActiveDocument.ActivePage.SelectShapesAtPoint(x, y, false).Shapes;
-                if (selectedShapes == null || selectedShapes.Count < 1)
-                    return;
-                colorReplace.ColorDestin = selectedShapes.First.Fill.UniformColor;
-                img_color2.Background = colorReplace.ColorDestin.ToSystemColor();
+                //double x = 0;
+                //double y = 0;
+                //int shift = 0;
+                //this.corelApp.ActiveDocument.GetUserClick(out x, out y, out shift, 1, false, Corel.Interop.VGCore.cdrCursorShape.cdrCursorExtPick);
+                //Corel.Interop.VGCore.Shapes selectedShapes = this.corelApp.ActiveDocument.ActivePage.SelectShapesAtPoint(x, y, false).Shapes;
+                //if (selectedShapes == null || selectedShapes.Count < 1)
+                //    return;
+                ColorPicker c = new ColorPicker(this.corelApp.ActivePalette);
+                if ((bool)c.ShowDialog())
+                {
+                    colorReplace.ColorDestin = c.SelectedColor.CorelColor;
+                    img_color.Background = colorReplace.ColorOrigin.ToSystemColor();
+                }
+               // colorReplace.ColorDestin = selectedShapes.First.Fill.UniformColor;
+               // img_color2.Background = colorReplace.ColorDestin.ToSystemColor();
             });
         }
 
